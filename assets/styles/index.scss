@@ -1,12 +1,45 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+$black-color: #000;
 
-.status{
-  border: 2px solid black;
-  height: 60px;
+
+button {
+  margin: 0 auto;
 }
 
-.content{
-  border: 2px solid black;
-  height: 300px;
+.create {
+  border: 2px solid $black-color;
+  height: 50px;
+  padding-bottom: 20px;
+  padding-top: 10px;
+}
+
+#create-instrument-data {
+  height: 90px;
+  text-align: center;
+}
+
+#clear-instruments {
+  position: sticky;
+}
+
+#get-instruments {
+  position: sticky;
+}
+
+#instrument-data {
+  border: 2px solid $black-color;
+  height: 500px;
+  margin-top: 20px;
+  overflow: scroll;
+  text-align: center;
+}
+
+.navbar-nav {
+  display: inline-flex;
+}
+
+.status {
+  height: 30px;
+  text-align: center;
 }

@@ -2,9 +2,8 @@
 
  <!-- Developers, why are we using data-id and not just id? -->
  <div>
-   <h1>List of Instruments</h1>
    <div>
-    <h2 data-id="{{instrument.id}}"> Number {{instrument.id}} </h2>
+    <h3 data-id="{{instrument.id}}"> ID {{instrument.id}} </h3>
     <p>Instrument: {{#if instrument.instrument}}
       {{instrument.instrument}}
     {{else}}
@@ -15,6 +14,12 @@
       {{instrument.genre}}
     {{else}}
       No Genre Provided.
+      {{/if}}
+    </p>
+    <p> User: {{#if instrument.user_id}}
+      {{instruments.email}}
+      {{else}}
+      No User Provided
       {{/if}}
     </p>
     <button type="button" class="btn classic" data-id="{{instrument.id}}" name="Update" id="update-id">Update</button>

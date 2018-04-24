@@ -8,11 +8,16 @@ const getInstrumentSuccess = function (data) {
   $('.content').html(showInstrumentHTML)
 }
 
-const clearInstrumentDiv = function (data) {
+const clearInstrumentSuccess = function (data) {
   $('.content').empty()
+}
+
+const createInstrumentSuccess = function (data) {
+
 }
 
 module.exports = {
   getInstrumentSuccess,
-  clearInstrumentDiv
+  clearInstrumentSuccess,
+  createInstrumentSuccess
 }

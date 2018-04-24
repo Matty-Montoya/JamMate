@@ -126,18 +126,35 @@
 <!-- Navigation End  -->
 <!--Beginning of Header  -->
 <header>
-  <h2 class="status"></h2>
+  <h3 class="status"></h3>
 </header>
 <!--End of Header  -->
-<!--Begininng of Section 1  -->
+
+<!-- Beginning of Create Section  -->
 <section>
-  <div id="instrument-data" class="container-fluid hidden">
+    <div id="create-instrument-data" class="container-fluid hidden create">
+      <h4>Create Instrument</h4>
+      <form id="create-instrument" >
+        <input type="text" name="instrument[instrument]" placeholder="Instrument Name">
+        <input type="text" name="instrument[genre]" placeholder="Genre Type">
+        <input type="submit" value="Create Instrument">
+      </form>
+    </div>
+</section>
+<!--End of Create Section -->
+
+<!--Begininng of Index of Inststruments Section -->
+<section>
+  <div class="container-fluid hidden" id="instrument-data" >
+      <h2>Get List</h2>
       <button type="button" name="button" id="get-instruments">Get Instruments</button>
       <button type="button" name="button" id="clear-instruments">Clear Instruments</button>
-    <div class="content">
+      <div class="content">
+
+      </div>
     </div>
-</div>
+  </div>
 </section>
-<!--End of Section 1  -->
+<!--End of Index of Instruments Section   -->
     </body>
 </html>
