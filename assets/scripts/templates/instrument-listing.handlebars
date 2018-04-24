@@ -1,0 +1,26 @@
+{{#each instruments as |instrument|}}
+
+ <!-- Developers, why are we using data-id and not just id? -->
+ <div>
+   <h1>List of Instruments</h1>
+   <div>
+    <h2 data-id="{{instrument.id}}"> Number {{instrument.id}} </h2>
+    <p>Instrument: {{#if instrument.instrument}}
+      {{instrument.instrument}}
+    {{else}}
+      No Instrument Provided.
+    {{/if}}
+  </p>
+    <p>Genre: {{#if instrument.genre}}
+      {{instrument.genre}}
+    {{else}}
+      No Genre Provided.
+      {{/if}}
+    </p>
+    <button type="button" class="btn classic" data-id="{{instrument.id}}" name="Update" id="update-id">Update</button>
+    <button type="button" class="btn classic" data-id="{{instrument.id}}" name="Remove" id="destroy-id">Remove</button>
+
+  </div>
+</div>
+
+{{/each}}

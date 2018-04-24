@@ -7,7 +7,9 @@
 // require('./example')
 
 const userEvents = require('./user-actions/events')
+const instrumentEvents = require('./instrument-actions/events')
 
 $(() => {
   userEvents.addHandlers()
+  instrumentEvents.addHandlers()
 })

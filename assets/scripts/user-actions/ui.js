@@ -27,6 +27,8 @@ const signInSuccess = function (data) {
   $('.sign-out').removeClass('hidden')
   $('input[type=text]').val('')
   $('input[type=password]').val('')
+  $('#instrument-data').removeClass('hidden')
+
   store.user = data.user
 }
 
