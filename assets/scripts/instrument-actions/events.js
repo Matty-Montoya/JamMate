@@ -15,20 +15,37 @@ const onCreateInstrument = (event) => {
     .then(ui.createInstrumentSuccess)
 }
 
-const onGetInstruments = (event) => {
+const onGetAllArtists = (event) => {
   event.preventDefault()
-  api.getInstruments()
-    .then(ui.getInstrumentSuccess)
+  api.getAllInstruments()
+    .then(ui.getAllArtistsSuccess)
+}
+
+const onGetMyInstruments = (event) => {
+  event.preventDefault()
+  api.getMyInstruments()
+    .then(ui.getMyInstrumentSuccess)
+}
+
+const onUpdateInstrument = (event) => {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  const instrumentId = $(event.target).closest('div').attr('data-id')
+  api.updateInstrument(data, instrumentId)
+    .then(ui.updateInstrumentSuccess)
 }
 
 const addHandlers = () => {
-  $('#get-instruments').on('click', onGetInstruments)
+  $('#get-instruments').on('click', onGetMyInstruments)
   $('#clear-instruments').on('click', onClearInstruments)
   $('#create-instrument').on('submit', onCreateInstrument)
+  $('#all-instruments').on('click', onGetAllArtists)
+  $('.content').on('submit', '.update-instrument', onUpdateInstrument)
 }
 module.exports = {
   addHandlers,
-  onGetInstruments,
+  onGetMyInstruments,
   onClearInstruments,
-  onCreateInstrument
+  onCreateInstrument,
+  onGetAllArtists
 }

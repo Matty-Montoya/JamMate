@@ -1,11 +1,17 @@
 'use strict'
 
 const showInstrumentTemplate = require('../templates/instrument-listing.handlebars')
+const showArtistTemplate = require('../templates/artist-listing.handlebars')
 
-const getInstrumentSuccess = function (data) {
+const getMyInstrumentSuccess = function (data) {
   console.log(data)
-  const showInstrumentHTML = showInstrumentTemplate({instruments: data.instruments})
+  const showInstrumentHTML = showInstrumentTemplate({instruments: data.user.instruments})
   $('.content').html(showInstrumentHTML)
+}
+
+const getAllArtistsSuccess = function (data) {
+  const showArtistHTML = showArtistTemplate({instruments: data.instruments})
+  $('.content').html(showArtistHTML)
 }
 
 const clearInstrumentSuccess = function (data) {
@@ -13,11 +19,18 @@ const clearInstrumentSuccess = function (data) {
 }
 
 const createInstrumentSuccess = function (data) {
+  $('input[type=text]').val('')
+}
 
+const updateInstrumentSuccess = function () {
+  $('input[type=text]').val('')
+  $('#updateModal').modal('toggle')
 }
 
 module.exports = {
-  getInstrumentSuccess,
+  getAllArtistsSuccess,
+  getMyInstrumentSuccess,
   clearInstrumentSuccess,
-  createInstrumentSuccess
+  createInstrumentSuccess,
+  updateInstrumentSuccess
 }

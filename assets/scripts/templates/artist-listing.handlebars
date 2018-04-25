@@ -1,0 +1,27 @@
+{{#each instruments as |instrument|}}
+
+ <!-- Developers, why are we using data-id and not just id? -->
+ <div>
+   <div>
+    <h3 data-id="{{instrument.id}}"> ID {{instrument.id}} </h3>
+    <p>Instrument: {{#if instrument.instrument}}
+      {{instrument.instrument}}
+    {{else}}
+      No Instrument Provided.
+    {{/if}}
+  </p>
+    <p>Genre: {{#if instrument.genre}}
+      {{instrument.genre}}
+    {{else}}
+      No Genre Provided.
+      {{/if}}
+    </p>
+    <p> User: {{#if user.email}}
+      {{user.email}}
+      {{else}}
+      No User Provided
+      {{/if}}
+    </div>
+  </div>
+
+  {{/each}}

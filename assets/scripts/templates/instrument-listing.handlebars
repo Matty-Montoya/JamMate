@@ -3,7 +3,7 @@
  <!-- Developers, why are we using data-id and not just id? -->
  <div>
    <div>
-    <h3 data-id="{{instrument.id}}"> ID {{instrument.id}} </h3>
+    <h3 data-id="{{instrument.id}}" > Instrument </h3>
     <p>Instrument: {{#if instrument.instrument}}
       {{instrument.instrument}}
     {{else}}
@@ -16,13 +16,32 @@
       No Genre Provided.
       {{/if}}
     </p>
-    <p> User: {{#if instrument.user_id}}
-      {{instruments.email}}
-      {{else}}
-      No User Provided
-      {{/if}}
-    </p>
-    <button type="button" class="btn classic" data-id="{{instrument.id}}" name="Update" id="update-id">Update</button>
+
+    <input type="button" class="btn classic" data-id="{{instrument.id}}" data-toggle="modal" data-target="#updateModal" name="Update" id="update-id" value="Update">
+
+    <!--Begin Update Modal -->
+    <div class="modal fade" id="updateModal"  tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Update Instrument</h4>
+          </div>
+        <div class="modal-body" data-id="{{instrument.id}}">
+          <form class="update-instrument" data-id="{{instrument.id}}">
+            <p>Instrument: <input required type="text" name="instrument[instrument]" placeholder="New Instrument Name"></p>
+            <p>Genre: <input required type="text" name="instrument[genre]" placeholder="New Genre Type"> </p>
+            <input type="submit" data-id="{{instrument.id}}" name="submit" value="Update Instrument">
+          </form>
+        </div>
+      <div class="modal-footer">
+        <!-- <input type="submit" data-id="{{instrument.id}}" name="update" value="Update Instrument"> -->
+      </div>
+    </div>
+  </div>
+</div>
+<!--End of Update Modal   -->
+
     <button type="button" class="btn classic" data-id="{{instrument.id}}" name="Remove" id="destroy-id">Remove</button>
 
   </div>

@@ -65,6 +65,7 @@ const signOutSuccess = function () {
   $('input[type=password]').val('')
   $('#instrument-data').addClass('hidden')
   $('#create-instrument-data').addClass('hidden')
+  $('.content').empty()
   store.user = null
 }
 

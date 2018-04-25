@@ -3,12 +3,24 @@
 const config = require('../config')
 const store = require('../store')
 
-const getInstruments = function () {
+const getAllInstruments = function () {
   return $.ajax({
     url: config.apiUrl + '/instruments',
     method: 'GET',
     headers: {
-      contentType: 'application/json'
+      contentType: 'application/json',
+      Authorization: `Token token=${store.user.token}`
+    }
+  })
+}
+
+const getMyInstruments = function () {
+  return $.ajax({
+    url: config.apiUrl + '/users/' + store.user.id,
+    method: 'GET',
+    headers: {
+      contentType: 'application/json',
+      Authorization: `Token token=${store.user.token}`
     }
   })
 }
@@ -26,7 +38,21 @@ const createInstrument = function (data) {
   })
 }
 
+const updateInstrument = function (data, instrumentId) {
+  return $.ajax({
+    url: config.apiUrl + '/instruments/' + instrumentId,
+    method: 'PATCH',
+    headers: {
+      contentType: 'application/json',
+      Authorization: `Token token=${store.user.token}`
+    },
+    data
+  })
+}
+
 module.exports = {
-  getInstruments,
+  getAllInstruments,
+  getMyInstruments,
+  updateInstrument,
   createInstrument
 }

@@ -35,7 +35,7 @@
       </ul>
       <div class="nav navbar-nav navbar-right" id="navbar-padding">
         <!--Sign In Button Trigger Modal  -->
-        <input type="button" class="btn btn-default  sign-in" data-toggle="modal" data-target="#myModal" value="Log In!">
+        <input required type="button" class="btn btn-default  sign-in" data-toggle="modal" data-target="#myModal" value="Log In!">
         <!-- Sign-In Modal -->
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
           <div class="modal-dialog" role="document">
@@ -46,9 +46,9 @@
               </div>
               <div class="modal-body">
                 <form id="sign-in">
-                  <input type="text" class="form-control" name="credentials[email]" placeholder="Email">
-                  <input type="password" class="form-control" name="credentials[password]" placeholder="Password">
-                  <input type="submit" class="btn btn-default" value="Sign-In">
+                  <input required type="text" class="form-control" name="credentials[email]" placeholder="Email">
+                  <input required type="password" class="form-control" name="credentials[password]" placeholder="Password">
+                  <input required type="submit" class="btn btn-default" value="Sign-In">
                 </form>
               </div>
               <div class="modal-footer">
@@ -71,10 +71,10 @@
               </div>
               <div class="modal-body">
                 <form id="sign-up">
-                  <input type="text" name="credentials[email]" placeholder="Email">
-                  <input type="password" name="credentials[password]" placeholder="Password">
-                  <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
-                  <input type="submit" class="btn btn-default" value="Sign Up!">
+                  <input required type="text" name="credentials[email]" placeholder="Email">
+                  <input required type="password" name="credentials[password]" placeholder="Password">
+                  <input required type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+                  <input required type="submit" class="btn btn-default" value="Sign Up!">
                 </form>
               </div>
               <div class="modal-footer">
@@ -86,7 +86,7 @@
         <!--Sign Up Modal End  -->
 
         <!-- Change Password Button Trigger Modal -->
-        <input type="button" class="btn btn-default hidden  change-password" data-toggle="modal" data-target="#myModal2" value="Change Password">
+        <input required type="button" class="btn btn-default hidden  change-password" data-toggle="modal" data-target="#myModal2" value="Change Password">
 
         <!-- Change Password Modal Begin -->
         <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -98,9 +98,9 @@
               </div>
               <div class="modal-body">
                 <form id="change-password">
-                  <input type="password" name="passwords[old]" placeholder="Old Password">
-                  <input type="password" name="passwords[new]" placeholder="New Password">
-                  <input type="submit" value="Change Password ">
+                  <input required type="password" name="passwords[old]" placeholder="Old Password">
+                  <input required type="password" name="passwords[new]" placeholder="New Password">
+                  <input required type="submit" value="Change Password ">
                 </form>
               </div>
               <div class="modal-footer">
@@ -114,7 +114,7 @@
         <!--Sign Out Button Start -->
         <form id="sign-out">
           <!-- <fieldset> -->
-          <input type="submit" class="btn btn-default hidden  sign-out" value="Sign Out">
+          <input required type="submit" class="btn btn-default hidden  sign-out" value="Sign Out">
           <!-- </fieldset> -->
         </form>
         <!--Sign Out Button End  -->
@@ -135,9 +135,9 @@
     <div id="create-instrument-data" class="container-fluid hidden create">
       <h4>Create Instrument</h4>
       <form id="create-instrument" >
-        <input type="text" name="instrument[instrument]" placeholder="Instrument Name">
-        <input type="text" name="instrument[genre]" placeholder="Genre Type">
-        <input type="submit" value="Create Instrument">
+        <input required type="text" name="instrument[instrument]" placeholder="Instrument Name">
+        <input required type="text" name="instrument[genre]" placeholder="Genre Type">
+        <input required type="submit" value="Create Instrument">
       </form>
     </div>
 </section>
@@ -146,9 +146,13 @@
 <!--Begininng of Index of Inststruments Section -->
 <section>
   <div class="container-fluid hidden" id="instrument-data" >
-      <h2>Get List</h2>
-      <button type="button" name="button" id="get-instruments">Get Instruments</button>
+    <div class="sticky">
+      <h2 class="master-list">What would you like to do?</h2>
+      <button type="button" name="button" id="get-instruments">Get My Instruments</button>
+      <button type="button" name="button" id="all-instruments">Get All Artists</button>
       <button type="button" name="button" id="clear-instruments">Clear Instruments</button>
+      <hr>
+    </div>
       <div class="content">
 
       </div>

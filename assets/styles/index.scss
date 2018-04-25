@@ -10,6 +10,7 @@ button {
 .create {
   border: 2px solid $black-color;
   height: 50px;
+  width: 800px;
   padding-bottom: 20px;
   padding-top: 10px;
 }
@@ -19,17 +20,10 @@ button {
   text-align: center;
 }
 
-#clear-instruments {
-  position: sticky;
-}
-
-#get-instruments {
-  position: sticky;
-}
-
 #instrument-data {
   border: 2px solid $black-color;
   height: 500px;
+  width: 800px;
   margin-top: 20px;
   overflow: scroll;
   text-align: center;
@@ -42,4 +36,8 @@ button {
 .status {
   height: 30px;
   text-align: center;
+}
+
+.sticky {
+  position: sticky;
 }
