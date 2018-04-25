@@ -4,7 +4,6 @@ const showInstrumentTemplate = require('../templates/instrument-listing.handleba
 const showArtistTemplate = require('../templates/artist-listing.handlebars')
 
 const getMyInstrumentSuccess = function (data) {
-  console.log(data)
   const showInstrumentHTML = showInstrumentTemplate({instruments: data.user.instruments})
   $('.content').html(showInstrumentHTML)
   // $('.status').text('Successfully loaded your instruments!')

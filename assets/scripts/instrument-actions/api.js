@@ -26,7 +26,6 @@ const getMyInstruments = function () {
 }
 
 const createInstrument = function (data) {
-  console.log('Instrument data is', data)
   return $.ajax({
     url: config.apiUrl + '/instruments',
     method: 'POST',
