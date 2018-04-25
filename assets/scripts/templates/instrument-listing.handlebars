@@ -4,23 +4,23 @@
  <div>
    <div>
     <h3 data-id="{{instrument.id}}" > Instrument </h3>
-    <p>Instrument: {{#if instrument.instrument}}
+    <h2>Instrument: {{#if instrument.instrument}}
       {{instrument.instrument}}
     {{else}}
       No Instrument Provided.
     {{/if}}
-  </p>
-    <p>Genre: {{#if instrument.genre}}
+  </h2>
+    <h2>Genre: {{#if instrument.genre}}
       {{instrument.genre}}
     {{else}}
       No Genre Provided.
       {{/if}}
-    </p>
+    </h2>
 
     <input type="button" class="btn classic" data-id="{{instrument.id}}" data-toggle="modal" data-target="#updateModal" name="Update" id="update-id" value="Update">
 
     <!--Begin Update Modal -->
-    <div class="modal fade" id="updateModal"  tabindex="-1" role="dialog">
+    <div class="modal" id="updateModal"  tabindex="-1" role="dialog">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -29,7 +29,7 @@
           </div>
         <div class="modal-body" data-id="{{instrument.id}}">
           <form class="update-instrument" data-id="{{instrument.id}}">
-            <p>Instrument: <input required type="text" name="instrument[instrument]" placeholder="New Instrument Name"></p>
+            <!-- <p>Instrument: <input required type="text" name="instrument[instrument]" placeholder="New Instrument Name"></p> -->
             <p>Genre: <input required type="text" name="instrument[genre]" placeholder="New Genre Type"> </p>
             <input type="submit" data-id="{{instrument.id}}" name="submit" value="Update Instrument">
           </form>
@@ -41,9 +41,7 @@
   </div>
 </div>
 <!--End of Update Modal   -->
-
-    <button type="button" class="btn classic" data-id="{{instrument.id}}" name="Remove" id="destroy-id">Remove</button>
-
+    <button type="button" class="btn classic destroy-id" data-id="{{instrument.id}}" name="Remove">Remove</button>
   </div>
 </div>
 

@@ -50,9 +50,21 @@ const updateInstrument = function (data, instrumentId) {
   })
 }
 
+const destroyInstrument = function (instrumentId) {
+  return $.ajax({
+    url: config.apiUrl + '/instruments/' + instrumentId,
+    method: 'DELETE',
+    headers: {
+      contentType: 'application/json',
+      Authorization: `Token token=${store.user.token}`
+    }
+  })
+}
+
 module.exports = {
   getAllInstruments,
   getMyInstruments,
   updateInstrument,
-  createInstrument
+  createInstrument,
+  destroyInstrument
 }

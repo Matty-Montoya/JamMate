@@ -13,6 +13,7 @@ const onCreateInstrument = (event) => {
   const data = getFormFields(event.target)
   api.createInstrument(data)
     .then(ui.createInstrumentSuccess)
+    .then(() => onGetMyInstruments(event))
 }
 
 const onGetAllArtists = (event) => {
@@ -33,6 +34,15 @@ const onUpdateInstrument = (event) => {
   const instrumentId = $(event.target).closest('div').attr('data-id')
   api.updateInstrument(data, instrumentId)
     .then(ui.updateInstrumentSuccess)
+    .then(() => onGetMyInstruments(event))
+}
+
+const onDestroyInstrument = (event) => {
+  event.preventDefault()
+  const instrumentId = $(event.target).closest('button').attr('data-id')
+  api.destroyInstrument(instrumentId)
+    .then(ui.deleteInstrumentSuccess)
+    .then(() => onGetMyInstruments(event))
 }
 
 const addHandlers = () => {
@@ -41,6 +51,7 @@ const addHandlers = () => {
   $('#create-instrument').on('submit', onCreateInstrument)
   $('#all-instruments').on('click', onGetAllArtists)
   $('.content').on('submit', '.update-instrument', onUpdateInstrument)
+  $('.content').on('click', '.destroy-id', onDestroyInstrument)
 }
 module.exports = {
   addHandlers,

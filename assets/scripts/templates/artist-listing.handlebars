@@ -3,24 +3,19 @@
  <!-- Developers, why are we using data-id and not just id? -->
  <div>
    <div>
-    <h3 data-id="{{instrument.id}}"> ID {{instrument.id}} </h3>
-    <p>Instrument: {{#if instrument.instrument}}
+    <h3 data-id="{{instrument.id}}"> User: {{user.email}} </h3>
+    <h2>Instrument: {{#if instrument.instrument}}
       {{instrument.instrument}}
     {{else}}
       No Instrument Provided.
     {{/if}}
-  </p>
-    <p>Genre: {{#if instrument.genre}}
+  </h2>
+    <h2>Genre: {{#if instrument.genre}}
       {{instrument.genre}}
     {{else}}
       No Genre Provided.
       {{/if}}
-    </p>
-    <p> User: {{#if user.email}}
-      {{user.email}}
-      {{else}}
-      No User Provided
-      {{/if}}
+    </h2>
     </div>
   </div>
 
