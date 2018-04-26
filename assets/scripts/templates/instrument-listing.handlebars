@@ -1,22 +1,24 @@
+<h1 style="text-align:center">My Instruments </h1>
+<hr>
+
 {{#each instruments as |instrument|}}
 
  <!-- Developers, why are we using data-id and not just id? -->
  <div>
    <div>
-    <h3 data-id="{{instrument.id}}" > Instrument </h3>
-    <h2>Instrument: {{#if instrument.instrument}}
+    <h3 data-id="{{instrument.id}}" ></h3>
+    <h4>Instrument: {{#if instrument.instrument}}
       {{instrument.instrument}}
     {{else}}
       No Instrument Provided.
     {{/if}}
-  </h2>
-    <h2>Genre: {{#if instrument.genre}}
+  </h4>
+    <h4>Genre: {{#if instrument.genre}}
       {{instrument.genre}}
     {{else}}
       No Genre Provided.
       {{/if}}
-    </h2>
-
+    </h4>
     <input type="button" class="btn classic" data-id="{{instrument.id}}" data-toggle="modal" data-target="#updateModal" name="Update" id="update-id" value="Update">
 
     <!--Begin Update Modal -->
@@ -44,5 +46,7 @@
     <button type="button" class="btn classic destroy-id" data-id="{{instrument.id}}" name="Remove">Remove</button>
   </div>
 </div>
+<hr>
+
 
 {{/each}}

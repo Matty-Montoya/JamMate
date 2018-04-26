@@ -29,6 +29,8 @@ const signInSuccess = function (data) {
   $('input[type=password]').val('')
   $('#instrument-data').removeClass('hidden')
   $('#create-instrument-data').removeClass('hidden')
+  $('.jumbotron').addClass('hidden')
+  $('.status').removeClass('hidden')
   store.user = data.user
 }
 
@@ -66,6 +68,7 @@ const signOutSuccess = function () {
   $('#instrument-data').addClass('hidden')
   $('#create-instrument-data').addClass('hidden')
   $('.content').empty()
+  $('.jumbotron').removeClass('hidden')
   store.user = null
 }
 

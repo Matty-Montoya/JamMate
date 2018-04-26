@@ -2,32 +2,159 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 $black-color: #000;
 
+body{
+}
 
 button {
   margin: 0 auto;
 }
 
+.status {
+  font-size: 20px;
+  height: 40px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.btn{
+  font-size: 18px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+
+h2 {
+  font-size: 50px;
+  margin-top:5px;
+}
+
+h3 {
+  font-family: 'Roboto', sans-serif;
+  margin-top: 10px;
+}
+
+.row {
+  text-align: center;
+  margin-left: 50px;
+  margin-top: 60px;
+}
+
 .create {
   border: 2px solid $black-color;
   height: 50px;
-  width: 800px;
   padding-bottom: 20px;
   padding-top: 10px;
+  width: 800px;
+}
+
+.container-fluid {
+  margin-right: auto;
+  padding-left: 21px;
+  padding-right: 20px;
 }
 
 #create-instrument-data {
-  height: 90px;
+  height: 110px;
   text-align: center;
 }
 
 #instrument-data {
   border: 2px solid $black-color;
-  height: 500px;
-  width: 800px;
+  height: 650px;
   margin-top: 20px;
   overflow: scroll;
   text-align: center;
+  width: 945px;
 }
+
+.jumbotron {
+  height: 600px;
+  background: url('https://i.imgur.com/69Nj7kA.jpg') no-repeat fixed;
+  background-size: cover;
+  // background-size: ;
+  text-align: center;
+}
+
+.jumbotron h1 {
+  font-size: 80px;
+  color: white;
+  float: left;
+  padding-left: 50px;
+  display: inline-block;
+  font-family: 'Passion One', cursive;
+  // font-family: 'Roboto', sans-serif;
+  text-shadow:
+  -2px -2px #000,
+  2px -2px #000,
+  -2px 2px #000,
+  2px 2px #000;
+}
+
+.jumbotron h2 {
+  color: white;
+  font-size: 80px;
+  padding-left: 100px;
+  font-family: 'Passion One', cursive;
+  // font-family: 'Roboto', sans-serif;
+  text-shadow:
+  -2px -2px #000,
+  2px -2px #000,
+  -2px 2px #000,
+  2px 2px #000;
+}
+
+.log-box {
+  // border: 4px solid white;
+  padding: 15px;
+  color:white;
+  // background-color: rgba(255, 255, 255, .1);
+
+}
+
+.log-box:hover {
+  color: red;
+  text-decoration: underline;
+  font-family: 'Passion One', cursive;
+}
+
+
+.mate{
+  color: red;
+
+}
+
+.mate:hover {
+}
+
+nav{
+  height: 80px;
+}
+
+.navbar{
+  margin-bottom: 0px;
+  border-radius: 0px;
+}
+
+.brand {
+  font-size: 60px;
+  font-family: 'Passion One', cursive;
+  color: white;
+  text-shadow:
+  -2px -2px #000,
+  2px -2px #000,
+  -2px 2px #000,
+  2px 2px #000;
+  text-decoration: none;
+}
+
+.brand:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.master-list{
+  font-family: 'Roboto', sans-serif;
+}
+
 
 .navbar-nav {
   display: inline-flex;

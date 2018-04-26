@@ -1,22 +1,27 @@
+<h1 style="text-align:center">All Artists</h1>
+<hr>
+
+
 {{#each instruments as |instrument|}}
 
  <!-- Developers, why are we using data-id and not just id? -->
  <div>
    <div>
-    <h3 data-id="{{instrument.id}}"> User: {{user.email}} </h3>
-    <h2>Instrument: {{#if instrument.instrument}}
+    <h3 data-id="{{instrument.id}}"> User:<a href="mailto:{{user.email}}"> {{user.email}} </a></h3>
+    <h4>Instrument: {{#if instrument.instrument}}
       {{instrument.instrument}}
     {{else}}
       No Instrument Provided.
     {{/if}}
-  </h2>
-    <h2>Genre: {{#if instrument.genre}}
+  </h4>
+    <h4>Genre: {{#if instrument.genre}}
       {{instrument.genre}}
     {{else}}
       No Genre Provided.
       {{/if}}
-    </h2>
+    </h4>
     </div>
   </div>
+  <hr>
 
   {{/each}}

@@ -5,7 +5,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <link href="https://fonts.googleapis.com/css?family=Passion+One" rel="stylesheet">
-
+      <link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
       <!-- Do not add `link` tags-->
       <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
@@ -16,7 +16,7 @@
     <body>
 
       <!-- Navigation Bar  -->
-<nav class="navbar navbar-default">
+<nav class="navbar stick navbar-inverse">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -26,7 +26,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="#" class="navbar-brand">JAM<span>MATE</span></a>
+      <a href="" class="brand">JAM<span class="mate">MATE</span></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -42,13 +42,13 @@
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">Sign In!</h4>
+                <h4 class="modal-title" id="myModalLabel">Log In!</h4>
               </div>
               <div class="modal-body">
                 <form id="sign-in">
-                  <input required type="email" class="form-control" name="credentials[email]" placeholder="Email">
+                  <input type="email" class="form-control" name="credentials[email]" placeholder="Email">
                   <input required type="password" class="form-control" name="credentials[password]" placeholder="Password">
-                  <input required type="submit" class="btn btn-default" value="Sign-In">
+                  <input required type="submit" class="btn btn-default" value="Log-In">
                 </form>
               </div>
               <div class="modal-footer">
@@ -125,15 +125,38 @@
 </nav>
 <!-- Navigation End  -->
 <!--Beginning of Header  -->
-<header>
+<header class="hidden">
   <h3 class="status"></h3>
 </header>
 <!--End of Header  -->
 
+<!--Beginning of Jumbotron   -->
+<div class="jumbotron">
+  <!-- <div class="container"> -->
+  <div class="container-fluid">
+    <div class="row">
+    <h1 class="">Looking For Someone To <span class="mate">Jam</span> With?</h1>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <h2 class="log-in-jumbo"><a href="" class="log-box" data-toggle="modal" data-target="#myModal" value="Log In!">Log In</a> To Find Someone!</h2>
+      <div class="row">
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- </div> -->
+<!--End of Jumbotron   -->
+
+<div class="status container-fluid hidden">
+
+</div>
 <!-- Beginning of Create Section  -->
 <section>
     <div id="create-instrument-data" class="container-fluid hidden create">
-      <h4>Create Instrument</h4>
+      <h3>Create Instrument</h3>
       <form id="create-instrument" >
         <input required type="text" name="instrument[instrument]" placeholder="Instrument Name">
         <input required type="text" name="instrument[genre]" placeholder="Genre Type">
@@ -159,5 +182,11 @@
   </div>
 </section>
 <!--End of Index of Instruments Section   -->
+
+<footer>
+
+</footer>
+
+
     </body>
 </html>
