@@ -7,6 +7,7 @@ const signUpSuccess = function () {
   setTimeout(() => $('.status').text(''), 2000)
   $('#myModal1').modal('toggle')
   $('input[type=text]').val('')
+  $('input[type=email]').val('')
   $('input[type=password]').val('')
 }
 
@@ -14,6 +15,7 @@ const signUpFailure = function () {
   $('.authmessage1').text('Please try again!')
   setTimeout(() => $('.authmessage1').text(''), 2000)
   $('input[type=text]').val('')
+  $('input[type=email]').val('')
   $('input[type=password]').val('')
 }
 
@@ -26,6 +28,7 @@ const signInSuccess = function (data) {
   $('.change-password').removeClass('hidden')
   $('.sign-out').removeClass('hidden')
   $('input[type=text]').val('')
+  $('input[type=email]').val('')
   $('input[type=password]').val('')
   $('#instrument-data').removeClass('hidden')
   $('#create-instrument-data').removeClass('hidden')
@@ -38,6 +41,7 @@ const signInFailure = function () {
   $('.authmessage').text('Please try again!')
   setTimeout(() => $('.authmessage').html(''), 5000)
   $('input[type=text]').val('')
+  $('input[type=email]').val('')
   $('input[type=password]').val('')
 }
 
