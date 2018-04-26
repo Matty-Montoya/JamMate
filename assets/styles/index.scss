@@ -46,6 +46,7 @@ h3 {
 }
 
 .container-fluid {
+  margin-bottom: 20px;
   margin-right: auto;
   padding-left: 21px;
   padding-right: 20px;
@@ -65,8 +66,10 @@ h3 {
 }
 
 footer {
-  color: black;
-  height: 55px;
+  background-color: black;
+  // margin-top: 20px;
+  height: 65px;
+  background-color: rgb(44, 44, 44);
 }
 
 #instrument-data {
@@ -78,19 +81,26 @@ footer {
   width: 945px;
 }
 
+.icon-bar {
+background-color: white;
+}
+
 .jumbotron {
   background: url('https://i.imgur.com/69Nj7kA.jpg') no-repeat fixed;
   background-size: cover;
-  height: 600px;
-  // background-size: ;
+  height: 85vh;
+  // height:100vw;
   text-align: center;
+  margin-top: -20px;
+  margin-bottom: -15px;
+
 }
 
 .jumbotron p {
   color: $white-color;
   display: inline-block;
   font-family: 'Passion One', cursive;
-  font-size: 80px;
+  font-size: 90px;
   // padding-left: 30px;
   text-align: center;
   text-shadow: -2px -2px $black-color, 2px -2px $black-color, -2px 2px $black-color, 2px 2px $black-color;
@@ -129,13 +139,19 @@ footer {
 
 nav {
   height: 80px;
-  background-color: rgb(44, 44, 44)
-
+  background-color: rgb(44, 44, 44);
+  margin-bottom: 0;
+  border: 4px;
 }
+
 
 .navbar {
   border-radius: 0;
-  margin-bottom: 0;
+}
+
+.navbar-toggle {
+  background-color: rgba(255, 255, 255, .15);
+  margin-top: 20px;
 }
 
 .navbar-nav {
@@ -153,6 +169,7 @@ nav {
 .status3 {
   text-align: center;
   font-family: 'Roboto', sans-serif;
+  color:white;
 }
 
 .sticky {
@@ -162,8 +179,12 @@ nav {
 }
 
 @media (max-width: 600px) {
+  .create{
+    width: 725px;
+  }
+
   .jumbotron {
-    margin-top:1px;
+    margin-top: -20px;
     height: 500px;
     background-size: contain;
   }
