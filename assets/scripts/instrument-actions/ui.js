@@ -13,6 +13,10 @@ const getMyInstrumentSuccess = function (data) {
   }
 }
 
+const getInstrumentStatus = function (data) {
+  $('.status').text('Successfully loaded your instruments!')
+}
+
 const getAllArtistsSuccess = function (data) {
   const showArtistHTML = showArtistTemplate({instruments: data.instruments})
   $('.content').html(showArtistHTML)
@@ -28,8 +32,8 @@ const clearInstrumentSuccess = function (data) {
 
 const createInstrumentSuccess = function (data) {
   $('input[type=text]').val('')
-  $('.status').text('Successfully created an instrument!')
-  setTimeout(() => $('.status').text(''), 3000)
+  $('.status1').text('Successfully created an instrument!')
+  setTimeout(() => $('.status1').text(''), 3000)
 }
 
 const updateInstrumentSuccess = function () {
@@ -40,8 +44,8 @@ const updateInstrumentSuccess = function () {
 }
 
 const deleteInstrumentSuccess = function () {
-  $('.status').text('Successfully deleted your instrument!')
-  setTimeout(() => $('.status').text(''), 3000)
+  $('.status2').text('Successfully deleted your instrument!')
+  setTimeout(() => $('.status2').text(''), 3000)
 }
 
 module.exports = {
@@ -50,5 +54,6 @@ module.exports = {
   clearInstrumentSuccess,
   createInstrumentSuccess,
   updateInstrumentSuccess,
-  deleteInstrumentSuccess
+  deleteInstrumentSuccess,
+  getInstrumentStatus
 }

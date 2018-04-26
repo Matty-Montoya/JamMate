@@ -26,6 +26,7 @@ const onGetMyInstruments = (event) => {
   event.preventDefault()
   api.getMyInstruments()
     .then(ui.getMyInstrumentSuccess)
+    .then(ui.getInstrumentStatus)
 }
 
 const onUpdateInstrument = (event) => {

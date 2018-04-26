@@ -1,30 +1,37 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 $black-color: #000;
-
-body{
-}
+$white-color: #fff;
+$red-color: #f00;
 
 button {
   margin: 0 auto;
 }
 
-.status {
-  font-size: 20px;
-  height: 40px;
-  font-family: 'Roboto', sans-serif;
+.brand {
+  color: $white-color;
+  font-family: 'Passion One', cursive;
+  font-size: 60px;
+  text-decoration: none;
+  text-shadow: -2px -2px $black-color, 2px -2px $black-color, -2px 2px $black-color, 2px 2px $black-color;
+
 }
 
-.btn{
+.brand:hover {
+  color: $white-color;
+  text-decoration: none;
+}
+
+
+.btn {
+  display: inline-block;
   font-size: 18px;
   margin-top: 20px;
-  display: inline-block;
 }
-
 
 h2 {
   font-size: 50px;
-  margin-top:5px;
+  margin-top: 5px;
 }
 
 h3 {
@@ -33,9 +40,15 @@ h3 {
 }
 
 .row {
-  text-align: center;
   margin-left: 50px;
   margin-top: 60px;
+  text-align: center;
+}
+
+.container-fluid {
+  margin-right: auto;
+  padding-left: 21px;
+  padding-right: 20px;
 }
 
 .create {
@@ -46,14 +59,8 @@ h3 {
   width: 800px;
 }
 
-.container-fluid {
-  margin-right: auto;
-  padding-left: 21px;
-  padding-right: 20px;
-}
-
 #create-instrument-data {
-  height: 110px;
+  height: 140px;
   text-align: center;
 }
 
@@ -67,104 +74,84 @@ h3 {
 }
 
 .jumbotron {
-  height: 600px;
   background: url('https://i.imgur.com/69Nj7kA.jpg') no-repeat fixed;
   background-size: cover;
+  height: 600px;
   // background-size: ;
   text-align: center;
 }
 
 .jumbotron h1 {
-  font-size: 80px;
-  color: white;
-  float: left;
-  padding-left: 50px;
+  color: $white-color;
   display: inline-block;
+  float: left;
   font-family: 'Passion One', cursive;
+  font-size: 80px;
   // font-family: 'Roboto', sans-serif;
-  text-shadow:
-  -2px -2px #000,
-  2px -2px #000,
-  -2px 2px #000,
-  2px 2px #000;
+  padding-left: 50px;
+  text-shadow: -2px -2px $black-color, 2px -2px $black-color, -2px 2px $black-color, 2px 2px $black-color;
 }
 
 .jumbotron h2 {
-  color: white;
+  color: $white-color;
+  font-family: 'Passion One', cursive;
   font-size: 80px;
   padding-left: 100px;
-  font-family: 'Passion One', cursive;
+
   // font-family: 'Roboto', sans-serif;
-  text-shadow:
-  -2px -2px #000,
-  2px -2px #000,
-  -2px 2px #000,
-  2px 2px #000;
+  text-shadow: -2px -2px #000, 2px -2px #000, -2px 2px #000, 2px 2px #000;
 }
 
 .log-box {
-  // border: 4px solid white;
+  // border: 4px solid $white-color;
+  color: $white-color;
   padding: 15px;
-  color:white;
   // background-color: rgba(255, 255, 255, .1);
-
 }
 
 .log-box:hover {
-  color: red;
+  color: $red-color;
+  font-family: 'Passion One', cursive;
   text-decoration: underline;
-  font-family: 'Passion One', cursive;
+}
+
+.mate {
+  color: $red-color;
 }
 
 
-.mate{
-  color: red;
-
-}
-
-.mate:hover {
-}
-
-nav{
-  height: 80px;
-}
-
-.navbar{
-  margin-bottom: 0px;
-  border-radius: 0px;
-}
-
-.brand {
-  font-size: 60px;
-  font-family: 'Passion One', cursive;
-  color: white;
-  text-shadow:
-  -2px -2px #000,
-  2px -2px #000,
-  -2px 2px #000,
-  2px 2px #000;
-  text-decoration: none;
-}
-
-.brand:hover {
-  text-decoration: none;
-  color: white;
-}
-
-.master-list{
+.master-list {
   font-family: 'Roboto', sans-serif;
 }
 
+nav {
+  height: 80px;
+}
+
+.navbar {
+  border-radius: 0;
+  margin-bottom: 0;
+}
 
 .navbar-nav {
   display: inline-flex;
 }
 
+
 .status {
-  height: 30px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  height: 40px;
   text-align: center;
 }
 
+.status3 {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
 .sticky {
+  background-color: $white-color;
   position: sticky;
+  top: 0;
 }

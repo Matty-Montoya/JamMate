@@ -57,8 +57,8 @@ const changePasswordFailure = function () {
 }
 
 const signOutSuccess = function () {
-  $('.status').text('You have signed out!')
-  setTimeout(() => $('.status').text(''), 2000)
+  $('.status3').text('You have signed out!')
+  setTimeout(() => $('.status3').text(''), 2000)
   $('.sign-in').removeClass('hidden')
   $('.sign-up').removeClass('hidden')
   $('.change-password').addClass('hidden')
@@ -69,6 +69,7 @@ const signOutSuccess = function () {
   $('#create-instrument-data').addClass('hidden')
   $('.content').empty()
   $('.jumbotron').removeClass('hidden')
+  $('.status').addClass('hidden')
   store.user = null
 }
 
