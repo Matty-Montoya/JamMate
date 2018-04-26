@@ -3,8 +3,8 @@
 const store = require('../store.js')
 
 const signUpSuccess = function () {
-  $('.status').text('You have successfully signed up! Please sign in!')
-  setTimeout(() => $('.status').text(''), 2000)
+  $('.status3').text('You have successfully signed up! Please sign in!')
+  setTimeout(() => $('.status3').text(''), 2000)
   $('#myModal1').modal('toggle')
   $('input[type=text]').val('')
   $('input[type=email]').val('')

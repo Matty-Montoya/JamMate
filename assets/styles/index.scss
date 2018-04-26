@@ -64,6 +64,11 @@ h3 {
   text-align: center;
 }
 
+footer {
+  color: black;
+  height: 55px;
+}
+
 #instrument-data {
   border: 2px solid $black-color;
   height: 650px;
@@ -81,25 +86,14 @@ h3 {
   text-align: center;
 }
 
-.jumbotron h1 {
+.jumbotron p {
   color: $white-color;
   display: inline-block;
-  float: left;
   font-family: 'Passion One', cursive;
   font-size: 80px;
-  // font-family: 'Roboto', sans-serif;
-  padding-left: 50px;
+  // padding-left: 30px;
+  text-align: center;
   text-shadow: -2px -2px $black-color, 2px -2px $black-color, -2px 2px $black-color, 2px 2px $black-color;
-}
-
-.jumbotron h2 {
-  color: $white-color;
-  font-family: 'Passion One', cursive;
-  font-size: 80px;
-  padding-left: 100px;
-
-  // font-family: 'Roboto', sans-serif;
-  text-shadow: -2px -2px #000, 2px -2px #000, -2px 2px #000, 2px 2px #000;
 }
 
 .log-box {
@@ -113,6 +107,11 @@ h3 {
   color: $red-color;
   font-family: 'Passion One', cursive;
   text-decoration: underline;
+}
+
+.log-box:active {
+  color: $red-color;
+  border: 0;
 }
 
 .mate {
@@ -130,6 +129,8 @@ h3 {
 
 nav {
   height: 80px;
+  background-color: rgb(44, 44, 44)
+
 }
 
 .navbar {
@@ -158,4 +159,38 @@ nav {
   background-color: $white-color;
   position: sticky;
   top: 0;
+}
+
+@media (max-width: 600px) {
+  .jumbotron {
+    margin-top:1px;
+    height: 500px;
+    background-size: contain;
+  }
+
+  .jumbotron p{
+    font-size: 30px;
+    padding-left: 0px;
+  }
+
+  .brand{
+    font-size: 40px;
+  }
+
+  .container-fluid {
+    margin-right: auto;
+    padding-left: 21px;
+    padding-right: 20px;
+  }
+
+  nav {
+  height: 40px;
+}
+
+.row {
+  margin-left: 10px;
+  margin-top: 20px;
+  text-align: center;
+}
+
 }
