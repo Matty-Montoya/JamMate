@@ -7,6 +7,13 @@ This is the client side of the JamMate application. JamMate allows users to crea
 
 ---
 
+### JamMate Client Links
+
+- [JamMate GitHub Client Repo](https://github.com/Matty-Montoya/JamMate)
+- [JamMate Deployed Page](https://matty-montoya.github.io/JamMate/)
+
+---
+
 ### JamMate API Links
 
 - [JamMate GitHub API Repo](https://github.com/Matty-Montoya/JamMate-Backend)
