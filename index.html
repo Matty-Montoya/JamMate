@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>JamMate</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <link href="https://fonts.googleapis.com/css?family=Passion+One" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+
+      <!-- Navigation Bar  -->
+<nav class="navbar stick navbar-classic">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <p class="brand">JAM<span class="mate">MATE</span></p>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+      </ul>
+      <div class="nav navbar-nav navbar-right">
+        <!--Sign In Button Trigger Modal  -->
+        <input required type="button" class="btn btn-default  sign-in" data-toggle="modal" data-target="#myModal" value="Log In!">
+        <!-- Sign-In Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Log In!</h4>
+              </div>
+              <div class="modal-body">
+                <form id="sign-in">
+                  <input type="email" class="form-control" name="credentials[email]" placeholder="Email">
+                  <input required type="password" class="form-control" name="credentials[password]" placeholder="Password">
+                  <input required type="submit" class="btn btn-default" value="Log-In">
+                </form>
+              </div>
+              <div class="modal-footer">
+                <h2 class="authmessage"></h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Sign-In Modal End  -->
+
+        <!-- Sign Up Button Trigger Modal -->
+        <input type="button" class="btn btn-default  sign-up" data-toggle="modal" data-target="#myModal1" value="Sign Up!">
+        <!-- Sign- Up Modal -->
+        <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Sign Up!</h4>
+              </div>
+              <div class="modal-body">
+                <form id="sign-up">
+                  <input required type="email" name="credentials[email]" placeholder="123@example.com">
+                  <input required type="password" name="credentials[password]" placeholder="Password">
+                  <input required type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+                  <input required type="submit" class="btn btn-default" value="Sign Up!">
+                </form>
+              </div>
+              <div class="modal-footer">
+                <h2 class="authmessage1"></h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Sign Up Modal End  -->
+
+        <!-- Change Password Button Trigger Modal -->
+        <input required type="button" class="btn btn-default hidden  change-password" data-toggle="modal" data-target="#myModal2" value="Change Password">
+
+        <!-- Change Password Modal Begin -->
+        <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Change Password</h4>
+              </div>
+              <div class="modal-body">
+                <form id="change-password">
+                  <input required type="password" name="passwords[old]" placeholder="Old Password">
+                  <input required type="password" name="passwords[new]" placeholder="New Password">
+                  <input required type="submit" value="Change Password ">
+                </form>
+              </div>
+              <div class="modal-footer">
+                <h2 class="authmessage2"></h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Change Password Modal End  -->
+
+        <!--Sign Out Button Start -->
+        <form id="sign-out">
+          <!-- <fieldset> -->
+          <input required type="submit" class="btn btn-default hidden  sign-out" value="Sign Out">
+          <!-- </fieldset> -->
+        </form>
+        <!--Sign Out Button End  -->
+
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- Navigation End  -->
+
+<!--Beginning of Header  -->
+<header>
+    <h3 class="status hidden"></h3>
+<header>
+<!--End of Header  -->
+
+<!--Beginning of Jumbotron   -->
+<div class="jumbotron">
+  <!-- <div class="container"> -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12">
+        <p class="">Looking For Someone To <span class="mate">Jam</span> With?</p>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <p class="log-in-jumbo"><a href="" class="log-box" data-toggle="modal" data-target="#myModal" value="Log In!">Log In</a> To Find Someone!</p>
+      <div class="row">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <h2 class="status3"></h2>
+  </div>
+</div>
+
+  <!-- </div> -->
+<!--End of Jumbotron   -->
+
+<!-- Beginning of Create Section  -->
+<section>
+    <div id="create-instrument-data" class="container-fluid hidden create">
+      <h3>Create Instrument!</h3>
+      <form id="create-instrument" >
+        <input required type="text" name="instrument[instrument]" placeholder="Instrument Name">
+        <input required type="text" name="instrument[genre]" placeholder="Genre Type">
+        <input required type="submit" value="Create Instrument">
+      </form>
+      <h4 class="status1"></h4>
+    </div>
+</section>
+<!--End of Create Section -->
+
+<!--Begininng of Index of Inststruments Section -->
+<section>
+  <div class="container-fluid hidden" id="instrument-data" >
+    <div class="sticky">
+      <h2 class="master-list">What would you like to do?</h2>
+      <button type="button" name="button" id="get-instruments">Get My Instruments</button>
+      <button type="button" name="button" id="all-instruments">Get All Artists</button>
+      <button type="button" name="button" id="clear-instruments">Clear Content</button>
+      <h4 class="status2"></h4>
+      <hr>
+    </div>
+      <div class="content">
+      </div>
+  </div>
+</section>
+<!--End of Index of Instruments Section   -->
+
+<footer class="footer">
+  <div class="container">
+
+  </div>
+</footer>
+
+
+</body>
+</html>
